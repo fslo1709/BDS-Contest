@@ -14,17 +14,17 @@ class Strategy():
                 'pairs': ['BTC-USDT'],
             },
         }
-        self.period = 20 * 60
+        self.period = 15 * 60
         self.options = {}
 
         # user defined class attribute
         self.last_type = 'sell'
         self.last_cross_status = None
         self.close_price_trace = np.array([])
-        self.ma_long = 20
-        self.ma_short = 5
-        self.UP = 1.5
-        self.DOWN = 4
+        self.ma_long = 12
+        self.ma_short = 6
+        self.UP = 1
+        self.DOWN = 3
 
     def on_order_state_change(self,  order):
         Log("on order state change message: " + str(order) + " order price: " + str(order["price"]))
